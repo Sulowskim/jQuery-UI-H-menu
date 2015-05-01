@@ -1,16 +1,81 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
+
+<html lang="en">
 	<head>
-		<title>TODO supply a title</title>
+		<title>jQuery UI horizontal menu demo</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+		<script src="js/jquery-ui-1.11.3.lefrog/external/jquery/jquery.js" type="text/javascript"></script>
+		<script src="js/jquery-ui-1.11.3.lefrog/jquery-ui.min.js" type="text/javascript"></script>
+		<script src="js/jquery-ui-h-menu.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			jQuery(function ($) {
+				$("#menu").menu({
+					justify: true,
+					auto_width: true,
+					width_from_parent: false,
+					submenu_css: {'width': '15em'},
+//					link_css: {'display': 'block', 'color': '#F0F0F0'}
+					link_css: {'display': 'block', 'color': '#black'},
+					justify_link_css: {'text-align': 'center', 'margin-left': '1em', 'margin-right': '1em'}
+				});
+			});
+		</script>
 	</head>
+
 	<body>
-		<div>TODO write content</div>
+		<div class="col-md-8" style="margin: 0px auto;float:none;width: 70%;">			
+			<ul id="menu">
+				<li><a href="#">Published</a></li>
+				<li><a href="#">Very long link without icon</a></li>
+				<li>
+					<a href="#"><span class="ui-icon ui-icon-zoomin"></span>Pages</a>
+					<ul>
+						<li>
+							<a href="#"><span class="ui-icon ui-icon-pencil"></span>Browse list</a>
+						</li>
+						<li>
+							<a href="#"><span class="ui-icon ui-icon-bookmark"></span>New page</a>
+							<ul>
+								<li>
+									<a href="#"><span class="ui-icon ui-icon-pencil"></span>As copy</a>
+								</li>
+								<li>
+									<a href="#"><span class="ui-icon ui-icon-bookmark"></span>From template</a>
+								</li>
+								<li>
+									<a href="#"><span class="ui-icon ui-icon-bookmark"></span>Last added</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#"><span class="ui-icon ui-icon-zoomin"></span>Navigations</a>
+					<ul>
+						<li>
+							<a href="#"><span class="ui-icon ui-icon-pencil"></span>Change parent</a></li>
+						<li>
+							<a href="#"><span class="ui-icon ui-icon-bookmark"></span>Join to</a>
+							<ul>
+								<li>
+									<a href="#"><span class="ui-icon ui-icon-pencil"></span>Search navigation</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><span class="ui-icon ui-icon-pencil"></span>Add new</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#"><span class="ui-icon ui-icon-zoomin"></span>Move</a>
+					<ul>
+						<li><a href="#"><span class="ui-icon ui-icon-pencil"></span>Another menu</a></li>
+						<li><a href="#"><span class="ui-icon ui-icon-pencil"></span>New menu</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
 	</body>
 </html>
